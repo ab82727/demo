@@ -1,0 +1,18 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+ <div class="navbar-inner">
+  <div class="container">
+   <%= link_to "FirstApp", root_path, id:"logo" %>
+
+   <% if user_signed_in? %>
+    你好,<%= current_user.name %> |
+    <%= link_to "profile", current_user %>
+    <%= link_to "登出", signout_path %>
+   <% else %>
+     <%= form_tag session_path do %>
+     <%= link_to "註冊", register_path %>
+     <%= link_to "登入", signin_path %>
+    <% end %>
+   <% end %>
+  </div>
+ </div>
+</header>

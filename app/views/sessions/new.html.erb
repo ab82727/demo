@@ -1,0 +1,12 @@
+<h1>登入</h1>
+<%= form_for :session, url: session_path do |f| %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <div class="actions">
+    <%= f.submit "登入" %>
+  </div>
+  <%= link_to 'Back', root_path %>
+<% end %>
+
