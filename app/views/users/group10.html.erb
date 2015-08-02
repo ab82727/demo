@@ -1,0 +1,86 @@
+<p id="notice"><%= notice %></p>
+<div class="bg">
+<img src="http://imagizer.imageshack.us/a/img661/7237/mQm5M5.jpg" height=300 >
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div style="float:left;">
+<strong><h3>大眾傳播學群</h3></strong>
+<h2><%= link_to '新聞記者', 'http://localhost:3000/group10?id=1'%><br><br>
+<%= link_to '導演', 'http://localhost:3000/group10?id=2'%><br><br>
+</h2>
+</div>
+<br><br>
+
+
+
+
+<div>
+  <ul class=" row col-center list-unstyled">
+  <% @users.each do |user| %>
+  <% if  params[:id] == "1" && user.career_id == "新聞記者" %>
+   <li class="col-md-6 col-lg-3 ">
+    <div class="panel">
+     <a class="fancybox fancybox.iframe" href="http://localhost:3000/users/<%= user.id %>" data-width="640" data-height="480" >
+      <div class="row row-table row-full-height">
+       <div class="col-sm-12 col-middle text-contrast text-center">
+        <div class="space-3">
+         <img src=<%= user.avatar.url%> width="255" >
+        </div>
+         <div class="h3">
+          <strong>
+          <%= user.nickname %>, <%= user.region %><br>
+          <%= user.career %><br>
+          學歷*<%= user.study %>
+          </strong>
+         </div>
+        </div>
+       </div>
+      </a>
+     </div>
+    </li>
+  <% end %>
+  <% if  params[:id] == "2" && user.career_id == "導演" %>
+   <li class="col-md-6 col-lg-3 ">
+    <div class="panel">
+     <a class="fancybox fancybox.iframe" href="http://localhost:3000/users/<%= user.id %>" data-width="640" data-height="480" >
+      <div class="row row-table row-full-height">
+       <div class="col-sm-12 col-middle text-contrast text-center">
+        <div class="space-3">
+         <img src=<%= user.avatar.url%> width="255" >
+        </div>
+         <div class="h3">
+          <strong>
+          <%= user.nickname %>, <%= user.region %><br>
+          <%= user.career %><br>
+          學歷*<%= user.study %>
+          </strong>
+         </div>
+        </div>
+       </div>
+      </a>
+     </div>
+    </li>
+  <% end %>
+  <% end %>
+  </ul>
+</div>
+<br>
+
+
+
+<div class="text-center">
+    <h2 class="h5 space-4 ">聯絡我們</h2>
+    <ul class="list-layout list-inline"  >
+        <li>
+          <a href="https://www.facebook.com/mentormatching?fref=ts" target="_blank">
+            Facebook
+          </a>
+        </li>
+        <li>
+          <a href="https://google.com" target="_blank">
+            Google+  
+          </a>
+        </li>
+    </ul>
+</div>

@@ -1,15 +1,41 @@
 <p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Name:</strong>
-  <%= @user.name %>
+  <%= image_tag @user.avatar.url(:medium) %><br>
 </p>
 
 <p>
+  <strong>姓名:</strong>
+  <%= @user.name %><br>
+  <strong>綽號:</strong>
+  <%= @user.nickname %><br>
+  <strong>Age:</strong>
+  <%= @user.age %><br>
+  <strong>居住地區:</strong>
+  <%= @user.region %><br>
+  <strong>現職:</strong>
+  <%= @user.career %><br>
+  <strong>求學經歷:</strong>
+  <%= @user.study %><br>
+  <strong>工作經歷:</strong>
+  <%= @user.careered %><br>
+  <strong>興趣:</strong>
+  <%= @user.hobby %><br>
+  <strong>天賦:</strong>
+  <%= @user.gifted %><br>
+
+</p>
+<p>
+  <% if can? :secretedata ,@user %>
   <strong>Email:</strong>
-  <%= @user.email %>
+  <%= @user.email %><br>
+  <strong>手機:</strong>
+  <%= @user.phone %><br>
+  <strong>地址:</strong>
+  <%= @user.address %><br>
+  <% end %>
 </p>
 
-
+<% if can? :update, @user%>
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<% end %>
+<%= link_to '首頁', root_path %>

@@ -1,0 +1,19 @@
+<p>
+<img src="https://lh3.googleusercontent.com/-HWwcUPP8MjA/UR4XhgWiLgI/AAAAAAAAH1c/tHutnDa-0bQ/s763/IMG_4387.JPG">
+</p>
+
+<table>
+<% @users.each do |user| %>
+<% if user.id >10  %>
+<td>
+<a class="fancybox fancybox.iframe" href="http://localhost:3000/users/<%= user.id %>"
+data-width="640" data-height="480" title=""><img style="border: 3px solid ; width: 200px; height: 300px;"
+src=<%= user.avatar.url%> alt=""></a>
+
+<font class="first" face="標楷體" color="#ff0000" size="4"  ><strong><%= user.nickname  %>, <%=  user.region %></strong></font>
+<font class="second" face="標楷體" color="#ff0000" size="4"><%= user.career %></font>
+<font class="last" face="標楷體" color="#ff0000" size="4">789</font>
+</td>
+<% end %>
+<% end %>
+</table>

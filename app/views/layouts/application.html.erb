@@ -1,26 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Demo</title>
+  <title>MentorMatching</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script type="text/javascript"
+  src="http://newsweek.shu.edu.tw:8080/lmcsilver20121007/fancyapps-fancyBox-0ffc358/source/jquery.fancybox.js"></script>
+  <link rel="stylesheet" type="text/css"
+  href="http://newsweek.shu.edu.tw:8080/lmcsilver20121007/fancyapps-fancyBox-0ffc358/source/jquery.fancybox.css"
+  media="screen"></link>
+  
+  
+
+  <style>
+  td{
+    position: relative;
+    width: 200px;
+    height: 300px;}
+  .photo{
+    position: absolute;
+    top: 0;
+    left: 0;}
+  .first{
+    position: absolute;
+    bottom: 80px;
+    left: 0px;}
+  .second{
+    position: absolute;
+    bottom: 40px;
+    left: 0px;}
+  .last{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;}
+  </style>    
+
+  <style>
+        .bg {
+            position:absolute;
+            top: 0;
+            left: 0;            
+            right: 0;
+            z-index: -999;
+        }
+        .bg img {
+            min-height: 100%;
+            width: 100%;
+        }
+    </style>
+
+  <style>
+.link {color:#00FFFF;}    
+.visited {color:#00BB00;} 
+.hover {color:#FF00FF;}   
+.active {color:#9932CC;}  
+</style>
+
 </head>
 <body>
+<script type="text/javascript">
+$(document).ready(function() {
+$(".fancybox").fancybox({
+padding: 0,
+fitToView: false,
+afterLoad: function(){
+this.width = $(this.element).data("width");
+this.height = $(this.element).data("height");
+}
+});
+});
+</script>
+
+
 
 <%= render 'shared/navbar' %>
-<!-- Content wrapped in container -->
 <div class="container">
   <%= yield %>
- <!-- New footer -->
- <footer class="footer">
-  <small>
-   <a href="codecamp.io">程式開發</a>
-  </small>
- </footer>
- <!-- Debugging footer -->
-  <%= debug(params) if Rails.env.development? %>
-</div>
 
+</div>
 </body>
 </html>

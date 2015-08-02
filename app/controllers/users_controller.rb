@@ -1,6 +1,88 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   authorize_resource :user
+  
+  def test
+    @users=User.all
+  end
+  def registagree
+  end 
+  def group
+    @users=User.all
+  end
+  
+  def group1
+    @users=User.all
+    params[:id]
+  end
+  def group2
+    @users=User.all
+    params[:id]
+  end
+  def group3
+    @users=User.all
+    params[:id]
+  end
+  def group4
+    @users=User.all
+    params[:id]
+  end
+  def group5
+    @users=User.all
+    params[:id]
+  end
+  def group6
+    @users=User.all
+    params[:id]
+  end
+  def group7
+    @users=User.all
+    params[:id]
+  end 
+  def group8
+    @users=User.all
+    params[:id]
+  end
+  def group9
+    @users=User.all
+    params[:id]
+  end
+  def group10
+    @users=User.all
+    params[:id]
+  end
+  def group11
+    @users=User.all
+    params[:id]
+  end
+  def group12
+    @users=User.all
+    params[:id]
+  end
+  def group13
+    @users=User.all
+    params[:id]
+  end
+  def group14
+    @users=User.all
+    params[:id]
+  end
+  def group15
+    @users=User.all
+    params[:id]
+  end
+  def group16
+    @users=User.all
+    params[:id]
+  end
+  def group17
+    @users=User.all
+    params[:id]
+  end
+
+ def home
+    @users = User.all
+  end
   # GET /users
   # GET /users.json
   def index
@@ -20,6 +102,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    @user= 
     authorize! :update, @user
   end
 
@@ -72,7 +155,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name,:email,:password,:password_confirmation)
+      params.require(:user).permit(:name,:email,:password,:password_confirmation,:career_id,:career,:nickname,:careered,:study,:hobby,:gifted,:other,:age,:region,:phone,:address,:avatar)
     end
  
   def after_sign_in_path_for(resource)
