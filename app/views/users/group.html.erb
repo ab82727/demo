@@ -72,7 +72,7 @@ function nav(){
 <div>
   <ul class=" row col-center list-unstyled">
   <% @users.each do |user| %>
-  <% if user.id > 10  %>
+  <% if user.id > 1  %>
    <li class="col-md-6 col-lg-3 ">
     <div class="panel">
      <a class="fancybox fancybox.iframe" href="http://localhost:3000/users/<%= user.id %>" data-width="640" data-height="600" >

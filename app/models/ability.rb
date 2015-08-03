@@ -8,6 +8,7 @@ class Ability
        user1 ||= User.new # guest user (not logged in)
        if user1.has_role?(:admin)
          can :manage, :all
+         can :teset, :all
        else
          can :group, :all
          can :group1, :all
@@ -29,7 +30,6 @@ class Ability
 	 can :group17, :all
          can :tips, :all
          can :registagree, :all
-         can :test, :all
          can :create, :all 
          can :read, :all
          can :new, :all
