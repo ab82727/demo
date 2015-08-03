@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  authorize_resource :user
-  
+  authorize_resource  
   def test
     @users=User.all
   end
