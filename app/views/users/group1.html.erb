@@ -18,7 +18,7 @@
 <div>
   <ul class=" row col-center list-unstyled">
   <% @users.each do |user| %>
-  <% if  params[:id] == "1" && user.career_id == "軟體工程師"  && user.id > "1" %>
+  <% if  params[:id] == "1" && user.career_id == "軟體工程師" %>
    <li class="col-md-6 col-lg-3 ">
     <div class="panel">
      <a class="fancybox fancybox.iframe" href="http://localhost:3000/users/<%= user.id %>" data-width="640" data-height="480" >
