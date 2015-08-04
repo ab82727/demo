@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   authorize_resource  
+
+  def newmentee
+    @user=User.new
+  end
+   
   def test
     @users=User.all
   end
@@ -116,8 +121,14 @@ class UsersController < ApplicationController
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
-        format.html { render :new }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        if @user.career_id != nil
+          format.html {render :new}        
+          format.json { render json: @user.errors, status: :unprocessable_entity }
+        else
+          format.html {render :newmentee}
+          format.json { render json: @user.errors, status: :unprocessable_entity }
+        
+        end
       end
     end
   end
@@ -154,7 +165,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name,:email,:password,:password_confirmation,:career_id,:career,:nickname,:careered,:study,:hobby,:gifted,:other,:age,:region,:phone,:address,:avatar)
+      params.require(:user).permit(:name,:email,:password,:password_confirmation,:career_id,:career_id1,:career_id2,:nickname,:study,:hobby,:gifted,:other,:age,:region,:phone,:address,:avatar,:story,:future,:help,:share,:words)
     end
  
   def after_sign_in_path_for(resource)

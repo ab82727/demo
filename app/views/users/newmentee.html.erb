@@ -1,0 +1,58 @@
+<h1>Mentee註冊</h1>
+
+<div class="column">
+ <%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from created:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.label :姓名 %>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :綽號 %>
+  <%= f.text_field :nickname %><br>
+
+  <%= f.label :email不公開 %>
+  <%= f.text_field :email %><br>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %><br>
+
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %><br>  
+
+  <%= f.label :Age %>
+  <%= f.text_field :age %><br>
+
+  <%= f.label :手機不公開 %>
+  <%= f.text_field :phone %><br>
+
+  <%= f.label :地址不公開 %>
+  <%= f.text_field :address %><br>
+
+  <%= f.label :興趣 %>
+  <%= f.text_field :hobby %><br>
+
+  <%= f.label :天賦 %>
+  <%= f.text_field :gifted %><br>
+
+  <%= f.label :授權碼 %>
+  <%= f.text_field :other %><br>
+  
+  <%= f.label :照片上傳 %>
+  <%= f.file_field :avatar %>
+    
+  <div>
+   <%= f.submit "成為Mentee!", class: "btn btn-primary" %>
+  </div>
+ <%= link_to '首頁', root_path %>
+ <% end %>
+</div>

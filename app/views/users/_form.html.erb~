@@ -12,21 +12,75 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :姓名 %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.label :希望mentee怎麽稱呼您 %><br>
+    <%= f.text_field :nickname %>
   </div>
   <div class="field">
     <%= f.label :password %><br>
     <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :我想說的是 %><br>
-    <%= f.text_field :other %>
+    <%= f.label :Age %><br>
+    <%= f.text_field :age %>
   </div>
+  <div class="field">
+    <%= f.label :居住地區 %><br>
+    <%= f.text_field :region %>
+  </div>
+  <div class="field">
+    <%= f.label :手機 %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :地址 %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :興趣 %><br>
+    <%= f.text_field :hobby %>
+  </div>
+  <div class="field">
+    <%= f.label :天賦 %><br>
+    <%= f.text_field :gifted %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :用一句話形容自己 %><br>
+    <%= f.text_field :words %>
+  </div>
+  <div class="field">
+    <%= f.label :學歷 %><br>
+    <%= f.text_field :study %>
+  </div>
+  <div class="field">
+    <%= f.label :請分享一個自己生職涯探索的歷程或故事 %><br>
+    <%= f.text_field :story %>
+  </div>
+  <div class="field">
+    <%= f.label :對自己未來的期許 %><br>
+    <%= f.text_field :future %>
+  </div>
+  <div class="field">
+    <%= f.label :覺得自己能夠給mentee什麼樣的協助 %><br>
+    <%= f.text_field :help %>
+  </div>
+  <div class="field">
+    <%= f.label :想和mentee分享的事or話 %><br>
+    <%= f.text_field :share %>
+  </div>
+
+  
+  <div class="field">
+    <%= f.label :照片上傳 %><br>
+    <%= f.file_field :avatar %>
+  </div>
+
+ 
 
   <div class="actions">
     <%= f.submit %>

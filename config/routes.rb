@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :users
   get 'registagree', to: 'users#registagree'
   get 'home', to: 'users#home'
+  get 'newmentee', to: 'users#newmentee'
   get 'test', to: 'users#test'
   get 'tips', to: 'users#tips'
   get 'group', to: 'users#group'

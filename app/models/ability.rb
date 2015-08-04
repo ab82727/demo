@@ -6,10 +6,12 @@ class Ability
     # Define abilities for the passed in user here. For example:
     #
        user1 ||= User.new # guest user (not logged in)
+       
        if user1.has_role?(:admin)
          can :manage, :all
          can :teset, :all
        else
+         can :newmentee, :all
          can :group, :all
          can :group1, :all
 	 can :group2, :all
@@ -63,4 +65,5 @@ class Ability
     
           
   end
+
 end

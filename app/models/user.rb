@@ -10,13 +10,13 @@ class User < ActiveRecord::Base
             :presence => { :on => :create }, 
             :exclusion => { :in => %w(admin superuser) } 
 
-  validates :email, 
+  validates_uniqueness_of :email, 
             :presence => { :on => :create },
             :format => { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create }
 
   validates :password,
             :presence => { :on => :create },
-            :length   => { :minimum => 6, :maximum=> 20},
+            :length   => { :minimum => 6, :maximum=> 25},
             :confirmation => true 
   validates_confirmation_of :password
   
@@ -26,7 +26,10 @@ class User < ActiveRecord::Base
   validates :age,
             :presence => { :on => :create },
             :length   => { :minimum => 1, :maximum=> 3}
-  validates :phone,
+  validates_uniqueness_of :phone,
             :presence => { :on => :create },
             :length   => { :minimum => 8, :maximum=> 13}
+  validates_inclusion_of :other, 
+            :in => ["mentor","mentee"], 
+            :message => ":錯誤的授權碼"
 end

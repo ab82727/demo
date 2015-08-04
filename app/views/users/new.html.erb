@@ -2,53 +2,61 @@
 
 <div class="column">
  <%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from created:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <%= f.label :姓名 %>
   <%= f.text_field :name %><br>
-
-  <%= f.label :綽號 %>
+  <%= f.label :希望mentee怎麽稱呼您 %>
   <%= f.text_field :nickname %><br>
-
-  <%= f.label :email不公開 %>
+  <%= f.label :email為帳號並且不會公開 %>
   <%= f.text_field :email %><br>
-
   <%= f.label :password %>
   <%= f.password_field :password %><br>
-
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %><br>  
 
-  <%= f.label :Age %>
+  <%= f.label :Age不會公開 %>
   <%= f.text_field :age %><br>
-
-  <%= f.label :手機不公開 %>
-  <%= f.text_field :phone %><br>
-
-  <%= f.label :地址不公開 %>
-  <%= f.text_field :address %><br>
-
   <%= f.label :居住地區 %>
   <%= f.text_field :region %><br>
-
-  <%= f.label :現職 %>
-  <%= f.text_field :career %><br>
-
-  <%= f.label :求學經歷 %>
-  <%= f.text_field :study %><br>
-
-  <%= f.label :工作經歷 %>
-  <%= f.text_field :careered %><br>
-
+  <%= f.label :手機不會公開 %>
+  <%= f.text_field :phone %><br>
+  <%= f.label :住址 %>  <%= f.label :不會公開 %>
+  <%= f.text_field :address %><br>
   <%= f.label :興趣 %>
   <%= f.text_field :hobby %><br>
-
   <%= f.label :天賦 %>
   <%= f.text_field :gifted %><br>
+  <%= f.label :用一句話形容自己 %>
+  <%= f.text_field :words %><br>
+  <%= f.label :學歷 %>
+  <%= f.text_field :study %><br>
+  <%= f.label :請分享一個自己生職涯探索的歷程或故事 %>
+  <%= f.text_field :story %><br>
+  <%= f.label :對自己未來的期許 %>
+  <%= f.text_field :future %><br>
+  <%= f.label :覺得自己能夠給mentee什麼樣的協助 %>
+  <%= f.text_field :help %><br>
+  <%= f.label :想和mentee分享的事or話 %>
+  <%= f.text_field :share %><br>
 
-  <%= f.label :我想說的是 %>
+  <%= f.label :授權碼 %>
   <%= f.text_field :other %><br>
   
-  <%= f.label :職業別 %>
-  <%= f.select(:career_id,[['軟體工程師', "軟體工程師"], ['韌體工程師', "韌體工程師"], ['電機工程師', "電機工程師"], ['機械工程師', "機械工程師"], ['化工工程師', "化工工程師"], ['數學研究人員', "數學研究人員"], ['醫師', "醫師"], ['護理師', "護理師"], ['生物科技研發人員', "生物科技研發人員"], ['實驗室人員', "實驗室人員"], ['漁夫', "漁夫"], ['農夫', "農夫"], ['環境工程師', "環境工程師"], ['地球科學研究人員', "地球科學研究人員"], ['建築師', "建築師"], ['室內設計師', "室內設計師"], ['美術設計', "美術設計"], ['廣告設計', "廣告設計"], ['新聞記者', "新聞記者"], ['導演', "導演"], ['翻譯員', "翻譯員"], ['歷史研究人員', "歷史研究人員"], ['國外業務', "國外業務"], ['旅行社', "旅行社"], ['教授', "教授"], ['幼教老師', "幼教老師"], ['社工師', "社工師"], ['臨床心理師', "臨床心理師"], ['律師', "律師"], ['法務人員', "法務人員"], ['行政主管', "行政主管"], ['總務主管', "總務主管"], ['會計師', "會計師"], ['財務主管', "財務主管"]]) %><br>
+  <%= f.label :根據自己喜好專長選擇前3名學群 %>
+  <%= f.select(:career_id,[['請選擇',"0"],['資訊', "1"],['工程', "1"],['數理化', "3"],['醫藥衛生', "4"],['生命科學', "5學"],['農林漁牧', "6"],['地球環境', "7"],['建築設計', "8"],['藝術', "9"],['大眾傳播', "10"],['文史哲', "11"],['外語', "12"],['教育', "13"],['社會心理', "14"],['法政', "15"],['管理', "16"],['財經', "17"]]) %><br>
+<%= f.select(:career_id1,[['請選擇',"0"],['資訊', "資訊"],['工程', "工程"],['數理化', "數理化"],['醫藥衛生', "醫藥衛生"],['生命科學', "生命科學"],['農林漁牧', "農林漁牧"],['地球環境', "地球環境"],['建築設計', "建築設計"],['藝術', "藝術"],['大眾傳播', "大眾傳播"],['文史哲', "文史哲"],['外語', "外語"],['教育', "教育"],['社會心理', "社會心理"],['法政', "法政"],['管理', "管理"],['財經', "財經"]]) %><br>
+<%= f.select(:career_id2,[['請選擇',"0"],['資訊', "資訊"],['工程', "工程"],['數理化', "數理化"],['醫藥衛生', "醫藥衛生"],['生命科學', "生命科學"],['農林漁牧', "農林漁牧"],['地球環境', "地球環境"],['建築設計', "建築設計"],['藝術', "藝術"],['大眾傳播', "大眾傳播"],['文史哲', "文史哲"],['外語', "外語"],['教育', "教育"],['社會心理', "社會心理"],['法政', "法政"],['管理', "管理"],['財經', "財經"]]) %><br>
   
   <%= f.label :照片上傳 %>
   <%= f.file_field :avatar %>

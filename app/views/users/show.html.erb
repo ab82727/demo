@@ -6,28 +6,39 @@
 <p>
   <strong>姓名:</strong>
   <%= @user.name %><br>
-  <strong>綽號:</strong>
+
+  <strong>希望mentee怎麽稱呼您:</strong>
   <%= @user.nickname %><br>
-  <strong>Age:</strong>
-  <%= @user.age %><br>
   <strong>居住地區:</strong>
   <%= @user.region %><br>
-  <strong>現職:</strong>
-  <%= @user.career %><br>
-  <strong>求學經歷:</strong>
-  <%= @user.study %><br>
-  <strong>工作經歷:</strong>
-  <%= @user.careered %><br>
   <strong>興趣:</strong>
   <%= @user.hobby %><br>
   <strong>天賦:</strong>
   <%= @user.gifted %><br>
+  <strong>用一句話形容自己:</strong>
+  <%= @user.words %><br>
+
+<% if @user.career_id != nil %>
+  <strong>學歷:</strong>
+  <%= @user.study %><br>
+  <strong>請分享一個自己生職涯探索的歷程或故事:</strong>
+  <%= @user.story %><br>
+  <strong>對自己的期許:</strong>
+  <%= @user.future %><br>
+  <strong>覺得自己能夠給mentee什麼樣的協助:</strong>
+  <%= @user.help %><br>
+  <strong>想和mentee分享的事or話:</strong>
+  <%= @user.share %><br>
+<% end %>
+  
 
 </p>
 <p>
-  <% if can? :secretedata ,@user %>
+  <% if can? :secretedata ,@manager %>
   <strong>Email:</strong>
   <%= @user.email %><br>
+  <strong>Age:</strong>
+  <%= @user.age %><br>
   <strong>手機:</strong>
   <%= @user.phone %><br>
   <strong>地址:</strong>
