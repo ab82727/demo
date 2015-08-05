@@ -38,7 +38,7 @@ function nav(){
 </script>
 <div class="bg">
 <img src="http://imagizer.imageshack.us/a/img661/2936/C1aYsr.jpg" height=500 >
-</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <div class="text-center">
 <form>
@@ -64,18 +64,15 @@ function nav(){
   </select>
  <input type="button" onclick="nav()" value="搜索" class="btn btn-primary btn-large" />
 </form>
-</div>
+</div><br><br><br><br><br>
  
-<br><br><br><br>
-
-
 <div>
   <ul class=" row col-center list-unstyled">
   <% @users.each do |user| %>
   <% if user.id > 1 && user.career_id != nil  %>
    <li class="col-md-6 col-lg-3 ">
     <div class="panel">
-     <a class="fancybox fancybox.iframe" href='users/<%= user.id %>' data-height="3000" data-width="800" >
+     <a class="fancybox fancybox.iframe" href='users/<%= user.id %>' data-height="100%" data-width="800" >
       <div class="row row-table row-full-height">
        <div class="col-sm-12 col-middle text-contrast text-center">
         <div class="space-3">

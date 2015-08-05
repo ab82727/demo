@@ -32,6 +32,8 @@ class Ability
 	 can :group17, :all
          can :tips, :all
          can :registagree, :all
+         can :menteeagree, :all
+         can :mentoragree, :all
          can :create, :all 
          can :read, :all
          can :new, :all

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   authorize_resource  
-
+  
   def newmentee
     @user=User.new
   end
@@ -10,7 +10,12 @@ class UsersController < ApplicationController
     @users=User.all
   end
   def registagree
-  end 
+  end
+  def menteeagree
+  end
+  def mentoragree
+  end
+ 
   def group
     @users=User.all
   end
@@ -96,7 +101,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    
+   params[:id]    
   end
 
   # GET /users/new

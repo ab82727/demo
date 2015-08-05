@@ -29,12 +29,10 @@
         </div>
          <div class="h3">
           <strong>
-          <%= user.name %><br>
-          創造屬於您的Airbnb
+          <%= user.nickname %>, <%= user.region %><br>
+          <%= user.career %><br>
+          學歷*<%= user.study %>
           </strong>
-         </div>
-         <div>
-          創造您的標誌，分享您的故事！
          </div>
         </div>
        </div>
@@ -53,12 +51,10 @@
         </div>
          <div class="h3">
           <strong>
-          <%= user.name %><br>
-          創造屬於您的Airbnb
+          <%= user.nickname %>, <%= user.region %><br>
+          <%= user.career %><br>
+          學歷*<%= user.study %>
           </strong>
-         </div>
-         <div>
-          創造您的標誌，分享您的故事！
          </div>
         </div>
        </div>
@@ -78,12 +74,12 @@
     <h2 class="h5 space-4 ">聯絡我們</h2>
     <ul class="list-layout list-inline"  >
         <li>
-          <a href="https://www.facebook.com/AirbnbTaiwan" target="_blank">
+          <a href="https://www.facebook.com/mentormatching?fref=ts" target="_blank">
             Facebook
           </a>
         </li>
         <li>
-          <a href="https://plus.google.com/+airbnb" target="_blank">
+          <a href="https://google.com/" target="_blank">
             Google+  
           </a>
         </li>

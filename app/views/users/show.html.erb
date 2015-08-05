@@ -38,8 +38,19 @@
   <strong>Email:</strong>
   <%= @user.email %><br>
   <strong>Age:</strong>
-  <%= @user.age %><br>
-  <strong>手機:</strong>
+  <% if @user.age== '1' %>
+     <strong>28-35<strong>
+  <% end %>
+  <% if @user.age== '2' %>
+     <strong>36-45<strong>
+  <% end %>
+  <% if @user.age== '3' %>
+     <strong>46-55<strong>
+  <% end %>
+  <% if @user.age== '4' %>
+     <strong>older<strong>
+  <% end %>
+ <br><strong>手機:</strong>
   <%= @user.phone %><br>
   <strong>地址:</strong>
   <%= @user.address %><br>

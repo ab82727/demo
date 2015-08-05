@@ -2,13 +2,11 @@
 <div class="bg">
 <img src="http://imagizer.imageshack.us/a/img661/7237/mQm5M5.jpg" height=300 >
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+<br><br><br><br><br><br><br><br><br><br><br><br>
 <div style="float:left;">
 <strong><h3>資訊學群</h3></strong>
-<h4><%= link_to '軟體工程師', 'group1?id=1'%><br><br>
-<%= link_to '韌體工程師', 'group1?id=2'%><br><br>
-</h4>
+
 </div>
 <br><br>
 
@@ -18,7 +16,7 @@
 <div>
   <ul class=" row col-center list-unstyled">
   <% @users.each do |user| %>
-  <% if  params[:id] == "1" && user.career_id == "軟體工程師" %>
+  <% if user.career_id == "1" || user.career_id1 == "1" || user.career_id2 == "1" %>
    <li class="col-md-6 col-lg-3 ">
     <div class="panel">
      <a class="fancybox fancybox.iframe" href='users/<%= user.id %>' data-width="700" data-height="500" >
@@ -38,28 +36,7 @@
       </a>
      </div>
     </li>
-  <% end %>
-  <% if  params[:id] == "2" && user.career_id == "韌體工程師" %>
-   <li class="col-md-6 col-lg-3 ">
-    <div class="panel">
-     <a class="fancybox fancybox.iframe" users/<%= user.id %>" data-width="700" data-height="500" >
-      <div class="row row-table row-full-height">
-       <div class="col-sm-12 col-middle text-contrast text-center">
-        <div class="space-3">
-         <img src=<%= user.avatar.url%> width="255" >
-        </div>
-         <div class="h3">
-          <strong>
-          <%= user.nickname %>, <%= user.region %><br>
-          學歷*<%= user.study %> 
-          </strong>
-         </div>
-        </div>
-       </div>
-      </a>
-     </div>
-    </li>
-  <% end %>
+  <% end %> 
   <% end %>
   </ul>
 </div>
@@ -77,7 +54,7 @@
           </a>
         </li>
         <li>
-          <a href="mailto:ab8272729@gmail.com">
+          <a href="mailto:mm.spirox@gmail.com">
             Gmail  
           </a>
         </li>

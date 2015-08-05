@@ -29,12 +29,10 @@
         </div>
          <div class="h3">
           <strong>
-          <%= user.name %><br>
-          創造屬於您的Airbnb
+          <%= user.nickname %>, <%= user.region %><br>
+          <%= user.career %><br>
+          學歷*<%= user.study %>
           </strong>
-         </div>
-         <div>
-          創造您的標誌，分享您的故事！
          </div>
         </div>
        </div>
@@ -53,12 +51,10 @@
         </div>
          <div class="h3">
           <strong>
-          <%= user.name %><br>
-          創造屬於您的Airbnb
+          <%= user.nickname %>, <%= user.region %><br>
+          <%= user.career %><br>
+          學歷*<%= user.study %>
           </strong>
-         </div>
-         <div>
-          創造您的標誌，分享您的故事！
          </div>
         </div>
        </div>
@@ -75,50 +71,17 @@
 
 
 <div class="text-center">
-    <h2 class="h5 space-4 hide-sm">關注我們</h2>
-    <ul class="list-layout list-inline" itemscope itemtype="http://schema.org/Organization">
-      <link itemprop="url" href="https://www.airbnb.com.tw">
-      <meta itemprop="logo" content="https://a2.muscache.com/airbnb/static/logos/belo-200x200-4d851c5b28f61931bf1df28dd15e60ef.png">
+    <h2 class="h5 space-4 ">聯絡我們</h2>
+    <ul class="list-layout list-inline"  >
         <li>
-          <a href="https://www.facebook.com/AirbnbTaiwan" class="link-contrast footer-icon-container" itemprop="sameAs" target="_blank">
-            <span class="screen-reader-only">Facebook</span>
-            <i class='icon footer-icon icon-facebook'></i>
-</a>        </li>
+          <a href="https://www.facebook.com/mentormatching?fref=ts" target="_blank">
+            Facebook
+          </a>
+        </li>
         <li>
-          <a href="https://plus.google.com/+airbnb" class="link-contrast footer-icon-container" itemprop="sameAs" rel="publisher" target="_blank">
-            <span class="screen-reader-only">Google+</span>
-            <i class='icon footer-icon icon-google-plus'></i>
-</a>        </li>
-        <li>
-          <a href="http://www.weibo.com/airbnb" class="link-contrast footer-icon-container" itemprop="sameAs" target="_blank">
-            <span class="screen-reader-only">微博</span>
-            <i class='icon footer-icon icon-weibo'></i>
-</a>        </li>
-
-        <li>
-          <a href="https://twitter.com/airbnb_tw" class="link-contrast footer-icon-container" itemprop="sameAs" target="_blank">
-            <span class="screen-reader-only">Twitter</span>
-            <i class='icon footer-icon icon-twitter'></i>
-</a>        </li>
-
-      <li>
-        <a href="https://www.linkedin.com/company/airbnb" class="link-contrast footer-icon-container" itemprop="sameAs" target="_blank">
-          <span class="screen-reader-only">LinkedIn</span>
-          <i class='icon footer-icon icon-linkedin'></i>
-</a>      </li>
-
-        <li>
-          <a href="http://www.youtube.com/airbnb" class="link-contrast footer-icon-container" itemprop="sameAs" target="_blank">
-            <span class="screen-reader-only">YouTube</span>
-            <i class='icon footer-icon icon-youtube'></i>
-</a>        </li>
-        <li>
-          <a href="https://www.instagram.com/airbnb" class="link-contrast footer-icon-container" itemprop="sameAs" target="_blank">
-            <span class="screen-reader-only">Instagram</span>
-            <i class='icon footer-icon icon-instagram'></i>
-</a>        </li>
+          <a href="https://google.com/" target="_blank">
+            Google+  
+          </a>
+        </li>
     </ul>
-    <div class="space-top-2 text-muted">
-      &copy; Airbnb, Inc.
-    </div>
-  </div>
+</div>

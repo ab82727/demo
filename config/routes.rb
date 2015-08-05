@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resource :session, only: [ :new, :create, :destroy]
   resources :users
   get 'registagree', to: 'users#registagree'
+  get 'menteeagree', to: 'users#menteeagree'
+  get 'mentoragree', to: 'users#mentoragree'
   get 'home', to: 'users#home'
   get 'newmentee', to: 'users#newmentee'
   get 'test', to: 'users#test'

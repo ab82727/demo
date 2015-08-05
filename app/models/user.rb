@@ -23,9 +23,7 @@ class User < ActiveRecord::Base
   validates :nickname,
             :presence => { :on => :create },
             :length   => { :minimum => 1, :maximum=> 20}
-  validates :age,
-            :presence => { :on => :create },
-            :length   => { :minimum => 1, :maximum=> 3}
+ 
   validates_uniqueness_of :phone,
             :presence => { :on => :create },
             :length   => { :minimum => 8, :maximum=> 13}
